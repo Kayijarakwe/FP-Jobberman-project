@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My JavaScript Project</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="bootstrapfiles/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <main>
+
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light lg-px-5" id="navBar">
+      <div class="container-fluid gap-lg-5 d-lg-flex justify-content-lg-between ">
+
+        <a class="navbar-brand  fw-bold d-flex " href="#" id="logoText">
+          <img src="images/logo-removebg-preview.png " class="px-2" id="logo" height="50">iJOBBERMAN</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse d-lg-flex gap-lg-5  justify-content-lg-evenly" id="navbarSupportedContent">
+          <ul class="navbar-nav gap-lg-5 mb-2 mb-lg-0">
+            <li class="nav-item" id="navItem">
+              <a class="nav-link fw-bold text-dark" aria-current="page" href="#"> Home</a>
+            </li>
+            <li class="nav-item" id="navItem">
+              <a class="nav-link fw-bold text-dark" aria-current="page" href="about.html"> About</a>
+            </li>
+           
+
+            <li class="nav-item dropdown" id="navItem">
+              <a class="nav-link" href="employee.html" id="navItem" role="button" >
+                Employees
+              </a>
+             
+            </li>
+           
+            <li class="nav-item" id="navItem">
+              <a class="nav-link " href="employer.html" id="navbarDropdown" role="button" >Employers </a>
+            </li>
+
+            <li class="nav-item dropdown" id="navItem">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Blog
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="navbarDropdown">
+                <li><a class="dropdown-item" href="jobs.html">Trending Jobs</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+
+                <li><a class="dropdown-item" href="news.html"> Job News</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+
+          <div class="container mb-2" id="navBtn">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <i class="fa fa-address-card"></i> LIST A JOB
+            </button>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="signRecipees"> 
+              <a href="./log in page/login.html"><i class="fa fa-user"></i> LOG OUT</a>
+            </button>
+            
+          </div>
+
+          
+        <!-- Modal for list a job -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" id="mbody">
+              <div class="modal-header" >
+                <h5 class="modal-title" id="staticBackdropLabel">Enter the job Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body " id="mbody1">
+        
+        
+                <div class="text-left ">
+                  <div class="mb-3" id="holder">
+                    <label for="totalCrypto" class="text-left me-2">Job Title</label>
+                    <input type="text" id="jobTitle">
+                  </div>
+                </div>
+        
+                <div class="text-left text-warning">
+                  <div class="mb-3" id="holder">
+                    <label for="totalCrypto" class="text-left">Location</label>
+                    <input type="text" id="jobLocation">
+                  </div>
+                </div>
+        
+                <div class="text-left text-warning">
+                  <div class="mb-3" id="holder">
+                    <label for="totalCrypto" class="text-left">Listing Date</label>
+                    <input type="date" id="jobDate">
+                  </div>
+                </div>
+
+                <div class="text-left text-warning">
+                  <div class="mb-3" id="holder">
+                    <label for="totalCrypto" class="text-left">Choose Job Category</label>
+                    <select id="jobCategory">
+                      <option>Finance</option>
+                      <option>Software/ICT</option>
+                      <option>Science</option>
+                      <option>Food</option>
+                      <option>Arts/Designs</option>
+                      <option>Education</option>
+                      <option>Sales/Marketing</option>
+                      <option>Healthcare</option>
+
+                    </select>
+        
+                  </div>
+                </div>
+        
+                <div class="text-left text-warning">
+                  <div class="mb-3" id="holder">
+                    <label for="jobType" class="text-left">Choose Job Type</label>
+                    <select id="jobType">
+                      <option>Part Time</option>
+                      <option>Full Time</option>
+                    </select>
+        
+                  </div>
+                </div>
+        
+        
+                <div class="text-left text-warning">
+                  <div class="mb-3" id="holder">
+                    <label  class="text-left">Job Details</label>
+                    <textarea id="jobDetails"></textarea>
+                  </div>
+                </div>
+
+                <div class="text-left text-warning">
+                  <div class="mb-3" id="holder">
+                    <label  class="text-left">Employer Email</label>
+                    <input type="email" id="employerEmail">
+                  </div>
+                </div>
+
+                <div class="text-left text-warning">
+                  <div class="mb-3" id="holder">
+                    <label  class="text-left">Employer Contact</label>
+                    <input type="text" id="employerContact">
+                  </div>
+                </div>
+        
+               
+              </div>
+        
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary"id="listJobSubmit" >Submit</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+
+            
+
+        </div>
+      </div>
+    </nav>
+
+  <div class="container-fluid" id="hero"
+      style="background-image:url('images/linkedin-sales-solutions-YDVdprpgHv4-unsplash.jpg');">
+
+      <div id="heroText">
+
+        <h2 class="">Welcome To iJOBBERMAN<br>
+        We are simply here to serve You!</h2> <br>
+        <h3 class="mb-5"><span>You are just a click away from finding a Job</span></h3>
+       
+        <!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Join Us Now
+</button> -->
+
+<!-- Modal for join us now  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" id="modalContent">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body" id="holder">
+          
+          
+          <div class="text-left">
+            <div class="mb-3" >
+              <label for="totalCrypto" class="text-left">Full Names</label>
+              <input type="text" id="fullNames" placeholder="as they appear on your CV">
+            </div>
+          </div>
+  
+          <div class="text-left text-warning">
+            <div class="mb-3" id="holder">
+              <label for="totalCrypto" class="text-left">Location</label>
+              <input type="text" id="location">
+            </div>
+          </div>
+  
+          
+  
+          <div class="text-left text-warning">
+            <div class="mb-3" id="holder">
+              <label for="totalCrypto" class="text-left">Choose Job Category</label>
+              <select id="category">
+                <option>FINANCE</option>
+                <option>SOFTWARE/ICT</option>
+                <option>SCIENCE</option>
+                <option>FOOD</option>
+                <option>ARTS/DESIGNS</option>
+                <option>Education</option>
+                <option>SALES/MARKETING</option>
+                <option>HEALTHCARE</option>
+
+              </select>
+  
+            </div>
+          </div>
+  
+  
+          <div class="text-left text-warning">
+            <div class="mb-3" id="holder">
+              <label for="totalCrypto" class="text-left">email</label>
+              <input type="email" required placeholder="example@email.com" id="email">
+            </div>
+          </div>
+  
+          
+        </div>
+        
+      
+      <button type="submit" class="btn btn-primary" id="joinBtn">Submit</button>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+      </div>
+     </div>
+  </div>
+    </div>
+
+    <div class="container-fluid px-lg-9" id="body1">
+      <div id="jobContainer" class="py-3">
+
+        <div>
+          <h2>HOT  JOBS FOR YOU  </h2>
+        </div>
+        
+      </div>
+    </div>
+
+    
+
+    <div id="hero2">
+      <div id="boxHolder" class="p-4">
+        <h2>Browse Categories </h2>
+        <div id="boxHolder1" class="mb-5">
+
+
+          <div class="card text-center py-5 " id="card">
+
+            <div class="card-body text-dark text-center" id="financeCard">
+             
+
+            </div>
+          </div>
+
+          <div class="card  py-5 " style="width: 25%;" id="card">
+
+            <div class="card-body text-dark text-center" id="salesCard">
+
+            </div>
+          </div>
+
+          <div class="card  py-5 " style="width: 25%;" id="card">
+
+            <div class="card-body text-dark text-center" id="TechCard">
+             
+
+            </div>
+          </div>
+
+          <div class="card  py-5 " style="width: 25%;" id="card">
+
+            <div class="card-body text-dark text-center" id="scienceCard">
+              
+
+            </div>
+          </div>
+
+          <div class="card  py-5 " style="width: 25%;" id="card">
+
+            <div class="card-body text-dark text-center" id="educationCard">
+          </div>
+          </div>
+
+          <div class="card  py-5 " style="width: 25%;" id="card">
+            <div class="card-body text-dark text-center" id="foodCard">
+             
+            </div>
+          </div>
+
+
+          <div class="card  py-5 " style="width: 25%;" id="card">
+            <div class="card-body text-dark text-center" id="healthCareCard">
+             
+
+            </div>
+          </div>
+
+
+          <div class="card text-center py-5 " style="width: 25%;" id="card">
+
+            <div class="card-body text-dark text-center" id="artsCard">
+             
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div id="featuredJobs">
+        <h2>Featured Jobs</h2>
+
+        <div id="featuresHolder">          
+        </div>
+
+        <div class="py-3" id="viewJobs">
+          <a href="jobs.html" target="_blank"> View All Jobs >>> </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="LFJ" class="container-fluid">
+      <div id="lfj1">
+        <h1>LOOKING FOR A JOB</h1>
+        <p>Join Thousands of Employers and Earn what you Deserve</p>
+           <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="">
+          <a href="jobs.html">Visit job Page</a></button>
+
+          <!-- Modal  to create new user-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body">
+          <div class="modal-body ">
+            
+            
+            <div class="text-left">
+              <div class="mb-3" id="holder">
+                <label for="totalCrypto" class="text-left">Full Names</label>
+                <input type="text" id="fullNames" placeholder="as they appear on your CV">
+              </div>
+            </div>
+    
+            <div class="text-left text-warning">
+              <div class="mb-3" id="holder">
+                <label for="totalCrypto" class="text-left">Location</label>
+                <input type="text" id="location">
+              </div>
+            </div>
+    
+            
+    
+            <div class="text-left text-warning">
+              <div class="mb-3" id="holder">
+                <label for="totalCrypto" class="text-left">Choose Job Category</label>
+                <select id="category">
+                  <option>FINANCE</option>
+                  <option>SOFTWARE/ICT</option>
+                  <option>SCIENCE</option>
+                  <option>FOOD</option>
+                  <option>ARTS/DESIGNS</option>
+                  <option>Education</option>
+                  <option>SALES/MARKETING</option>
+                  <option>HEALTHCARE</option>
+  
+                </select>
+    
+              </div>
+            </div>
+    
+    
+            <div class="text-left text-warning">
+              <div class="mb-3" id="holder">
+                <label for="totalCrypto" class="text-left">email</label>
+                <input type="email" required placeholder="example@email.com" id="email">
+              </div>
+            </div>
+
+            
+          </div>
+          
+        
+        <button type="submit" class="btn btn-primary" id="receiptBtn">Update</button>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+      </div>
+      </div>
+   </div>
+
+    <div>
+      <div id="featuredJobs">
+        <h2>Latest Job News</h2>
+        <div id="featuredJobs1">
+       
+        </div>
+
+        <div id="viewNews" class="py-3">
+          <a href="news.html" target="_parent"> View More News >>></a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="listedJobs" >
+      <div id="listedJobs1" >
+        <h2 class="py-3">Listed Jobs</h2>
+
+        <div id="listedHolder">
+         
+
+        <!-- Modal for listed job details -->
+     <div class="modal fade" id="listedJobDetails" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+           <div class="modal-content">
+            <div class="modal-header">
+          <h5 class="modal-title" id="listedJobDetailsLabel">Find Out Details About the Job</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+        <div class="modal-body" id="listedJobDetailsInput">
+         
+        </div> 
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+       </div>
+        </div>
+         </div>
+       </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="carousel">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" id="carouselinner">
+          <div class="carousel-item active" id="carouselHolder" data-bs-interval="3000">
+            <div id="carouselImage1" > </div>
+            
+            <div class="carousel-caption ">
+              <h5>Emmanuel Wong </h5>
+              <p>I am a testimony of the opportunities that abides with iJobbers</p>
+            </div>
+          </div>
+
+          <div class="carousel-item" id="carouselHolder" data-bs-interval="2000">
+            <div id="carouselImage2"> </div>
+            
+            <div class="carousel-caption ">
+              <h5>Engr Kel</h5>
+              There are lots of opportunities for you here. Just get Started first!
+            </div>
+          </div>
+
+         
+          <div class="carousel-item" id="carouselHolder"data-bs-interval="2000">
+            <div id="carouselImage3"> </div>
+            
+            <div class="carousel-caption">
+              <h5>Ijarakwe Emmanuel</h5>
+              <p>iJobbers helped me secure my first Job. i am forever grateful</p>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+     
+
+
+          </div>
+
+    <div id="subscribe">
+      <div id="subscribe1">
+        <div>
+        <h1>DO YOU WANT TO GET HIRED EASILY?</h1>
+        Click to Upload your Resume
+        </div>
+      <div>
+    
+     <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadresume">
+      Upload Resume
+    </button>
+
+<!-- Modal -->
+<div class="modal fade" id="uploadresume" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Fill in The Form to Upload CV</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+            <div class="modal-body ">
+              
+              
+              <div class="text-left">
+                <div class="mb-3" id="holder">
+                  <label for="totalCrypto" class="text-left">Full Names</label>
+                  <input type="text" id="resumeName" placeholder="as they appear on your CV">
+                </div>
+              </div>
+      
+              <div class="text-left text-warning">
+                <div class="mb-3" id="holder">
+                  <label for="totalCrypto" class="text-left">Location</label>
+                  <input type="text" id="resumeLocation">
+                </div>
+              </div>
+      
+              
+      
+              <div class="text-left text-warning">
+                <div class="mb-3" id="holder">
+                  <label for="totalCrypto" class="text-left">Choose Job Category</label>
+                  <select id="resumeCategory">
+                    <option>FINANCE</option>
+                    <option>SOFTWARE/ICT</option>
+                    <option>SCIENCE</option>
+                    <option>FOOD</option>
+                    <option>ARTS/DESIGNS</option>
+                    <option>Education</option>
+                    <option>SALES/MARKETING</option>
+                    <option>HEALTHCARE</option>
+    
+                  </select>
+      
+                </div>
+              </div>
+      
+              <div class="text-left text-warning">
+                <div class="mb-3" id="holder">
+                  <label for="totalCrypto" class="text-left">Email</label>
+                  <input type="text" id="resumeEmail">
+                </div>
+              </div>
+
+              <div class="text-left text-warning">
+                <div class="mb-3" id="holder">
+                  <label for="totalCrypto" class="text-left">Phone No</label>
+                  <input type="text" id="resumeContact">
+                </div>
+              </div>
+              
+              <div class="text-left text-warning">
+                <div class="mb-3" id="holder">
+                  <label for="totalCrypto" class="text-left">Upload Your Image</label>
+                  <input type="file" required placeholder="Choose an Image" id="resumeImg">
+                </div>
+              </div>
+
+      
+              <div class="text-left text-warning">
+                <div class="mb-3" id="holder">
+                  <label for="totalCrypto" class="text-left">Upload File</label>
+                  <input type="file" required placeholder="Choose a file" id="resumeFile">
+                </div>
+              </div>
+  
+              
+            </div>
+            
+          
+         
+       
+      <div class="modal-footer" id="resume">
+         <button type="submit" class="btn btn-primary" id="uploadBtn">Submit</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+
+      </div>
+      </div>
+      <hr>
+
+      <div id="subscribe1">
+        <div>
+        <h1>DO YOU WANT COMPETENT EMPLOYEES?</h1>
+        Click to Chceck matching Resumes
+        </div>
+        <div>
+        <button ><a href="employer.html"> Check Uploaded Resume</a></button>
+        </div>
+      </div>
+
+     
+      
+
+    </div>
+
+
+
+    <div id="dashBoard">
+
+      <div id="dashBoardContainer">
+        <div id="dashBoardContainerInner1">
+        
+      </div>
+
+      <div id="dashBoardContainerInner">
+        <i class="fa fa-users fa-3x mb-2" id="cicon"></i>
+        <h2 class="mb-3">Members</h2>
+        <h1>20341</h1>
+      </div>
+
+      <div id="dashBoardContainerInner">
+        <i class="fa fa-user-cog fa-3x mb-2" id="cicon"></i>
+        <h2 class="mb-3">Resume</h2>
+        <h1>23541</h1>
+      </div>
+
+      <div id="dashBoardContainerInner2">
+       
+      </div>
+
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+      <div id="footerId">
+
+        <div id="footerLogo" class="text-white">
+          <img src="images/logo-removebg-preview.png" height="100" width="100">
+          Welcome to iJOBBERMAN, browse through our services and find the one that best suits what you are looking for.
+          We are always ready to listen to your suggestion, complaints or requests andf provide adeqaute solutions.
+
+
+        </div>
+
+        <div id="quickLinks">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="employee.html">Employees</a></li>
+            <li><a href="employer.html">Employers</a></li>
+            <li><a href="jobs.html">Job Page</a></li>
+            <li><a href="news.html">Job News</a></li>
+          </ul>
+        </div>
+
+        <div id="quickLinks">
+          <h3>Trending Jobs</h3>
+          <ul>
+            <li>Android Developer </li>
+            <li>FrontEnd Developer</li>
+            <li>Junior Tester</li>
+            <li>Project Managers</li>
+            <li>Senior Accountant</li>
+          </ul>
+        </div>
+
+        <div id="quickLinks">
+          <h3>Follow Us</h3>
+          <div class="d-flex justify-content-center gap-2">
+            <div id="test"><div id="testHome"><i class="fab fa-twitter me-3"></i></div></div>
+            <div id="test"><div id="testHome"><i class="fab fa-facebook me-3"></i></div></div>
+            <div id="test"><div id="testHome"><i class="fab fa-youtube me-3"></i></div></div>
+            <div id="test"><div id="testHome"><i class="fab fa-instagram me-3"></i></div></div>
+            <div id="test"><div id="testHome"><i class="fab fa-github me-3"></i></div></div>
+          </div>
+          <div id="mail">
+          Join our Mailing List and get notices about our new Services
+          <div><input type="text"><button id="mailBtn">Send</button></div>
+        </div>
+        </div>
+
+      </div>
+      <hr>
+      <div class="text-center">
+        All rights reserved &copy;2022- Designed and Developed by Kayijarakwe
+      </div>
+
+    </footer>
+  </main>
+</body>
+<script src="bootstrapfiles/js/bootstrap.bundle.js"></script>
+<script src="script.js"></script>
+
+</html>
